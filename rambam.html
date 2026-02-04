@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mishneh Torah: Shemitah ve-Yovel</title>
+    <title>משנה תורה - הלכות שמיטה ויובל</title>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #fdfaf3;
-            --card-bg: #ffffff;
+            --bg: #fdfaf3;
+            --card: #ffffff;
             --accent: #8b5e3c;
-            --text: #2c2c2c;
-            --border: #e0d9c5;
+            --text-primary: #2c2c2c;
+            --text-secondary: #5a5a5a;
+            --border-gold: #e0d9c5;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text);
+            background-color: var(--bg);
+            color: var(--text-primary);
             font-family: 'Frank Ruhl Libre', serif;
             margin: 0;
             padding: 0;
@@ -25,128 +26,127 @@
 
         header {
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
             background: white;
-            border-bottom: 3px double var(--border);
+            border-bottom: 4px double var(--border-gold);
+            margin-bottom: 40px;
         }
 
         .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
         }
 
         .halacha-card {
-            background: var(--card-bg);
-            margin-bottom: 60px;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            border: 1px solid var(--border);
+            background: var(--card);
+            margin-bottom: 50px;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 10px 25px rgba(139, 94, 60, 0.05);
         }
 
-        .text-split {
+        .text-layout {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 40px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
-        .he {
+        .hebrew-side {
             font-family: 'Amiri', serif;
-            font-size: 1.4rem;
+            font-size: 1.45rem;
             text-align: justify;
         }
 
-        .en {
+        .english-side {
             direction: ltr;
-            font-size: 1.1rem;
-            color: #555;
-            border-left: 2px solid #f0ede5;
-            padding-left: 25px;
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            border-left: 2px solid #f2eee3;
+            padding-left: 30px;
         }
 
-        .num {
+        .number-tag {
             color: var(--accent);
-            font-weight: bold;
+            font-weight: 700;
+            margin-left: 5px;
         }
 
-        /* Image Styling */
-        .img-container {
+        /* Image Display */
+        .image-box {
             width: 100%;
-            text-align: center;
-            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
         }
 
         .halacha-img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            border: 1px solid #eee;
-            /* subtle hover effect */
-            transition: transform 0.2s ease-in-out;
+            border-radius: 10px;
+            border: 1px solid var(--border-gold);
+            object-fit: cover;
         }
 
-        .halacha-img:hover {
-            transform: scale(1.01);
-        }
-
-        @media (max-width: 800px) {
-            .text-split { grid-template-columns: 1fr; }
-            .en { border-left: none; border-top: 1px solid #eee; padding-top: 20px; }
+        /* Responsive Fix for Mobile */
+        @media (max-width: 850px) {
+            .text-layout { grid-template-columns: 1fr; gap: 25px; }
+            .english-side { border-left: none; border-top: 1px solid #f2eee3; padding: 20px 0 0 0; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1 style="color: var(--accent); margin-bottom: 5px;">הלכות שמיטה ויובל</h1>
-    <div style="direction: ltr; font-style: italic; color: #777;">Laws of the Sabbatical and Jubilee Years</div>
+    <h1 style="font-size: 2.8rem; margin: 0; color: var(--accent);">משנה תורה</h1>
+    <h2 style="font-weight: 400; margin: 10px 0; color: #444;">הלכות שמיטה ויובל - פרק א</h2>
 </header>
 
 <div class="container">
 
-    <div class="halacha-card">
-        <div class="text-split">
-            <div class="he">
-                <span class="num">א.</span> מִצְוַת עֲשֵׂה לִשְׁבֹּת מֵעֲבוֹדַת הָאָרֶץ וַעֲבוֹדַת הָאִילָן בְּשָׁנָה שְׁבִיעִית שֶׁנֶּאֱמַר (שמות כג, יא): "וְהַשְּׁבִיעִת תִּשְׁמְטֶנָּה וּנְטַשְׁתָּהּ".
+    <section class="halacha-card">
+        <div class="text-layout">
+            <div class="hebrew-side">
+                <span class="number-tag">א.</span> מִצְוַת עֲשֵׂה לִשְׁבֹּת מֵעֲבוֹדַת הָאָרֶץ וַעֲבוֹדַת הָאִילָן בְּשָׁנָה שְׁבִיעִית שֶׁנֶּאֱמַר (שמות כג, יא): "וְהַשְּׁבִיעִת תִּשְׁמְטֶנָּה וּנְטַשְׁתָּהּ".
             </div>
-            <div class="en">
-                <span class="num">1.</span> It is a positive commandment to rest from agricultural work and tree cultivation in the seventh year, as it is said: "But the seventh year you shall let it rest and lie fallow."
+            <div class="english-side">
+                <span class="number-tag">1.</span> It is a positive commandment to rest from agricultural work and tree cultivation in the seventh year, as it is said (Exodus 23:11): "But the seventh year you shall let it rest and lie fallow."
             </div>
         </div>
-        <div class="img-container">
-            <img src="image1.png" alt="Resting the Land" class="halacha-img">
+        <div class="image-box">
+            <img src="image1.png" alt="Sabbatical Rest" class="halacha-img">
         </div>
-    </div>
+    </section>
 
-    <div class="halacha-card">
-        <div class="text-split">
-            <div class="he">
-                <span class="num">ב.</span> אֵינוֹ לוֹקֶה מִן הַתּוֹרָה אֶלָּא עַל הַזְּרִיעָה אוֹ עַל הַזְּמִירָה וְעַל הַקְּצִירָה וְעַל הַבְּצִירָה.
+    <section class="halacha-card">
+        <div class="text-layout">
+            <div class="hebrew-side">
+                <span class="number-tag">ב.</span> אֵינוֹ לוֹקֶה מִן הַתּוֹרָה אֶלָּא עַל הַזְּרִיעָה אוֹ עַל הַזְּמִירָה וְעַל הַקְּצִירָה וְעַל הַבְּצִירָה.
             </div>
-            <div class="en">
-                <span class="num">2.</span> One is only liable for lashes according to the Torah for sowing, pruning, reaping, or harvesting grapes.
+            <div class="english-side">
+                <span class="number-tag">2.</span> One is only liable for lashes according to the Torah for sowing, pruning, reaping, or harvesting grapes.
             </div>
         </div>
-        <div class="img-container">
-            <img src="image2.png" alt="Field Labors" class="halacha-img">
+        <div class="image-box">
+            <img src="image2.png" alt="Forbidden Labors" class="halacha-img">
         </div>
-    </div>
+    </section>
 
-    <div class="halacha-card">
-        <div class="text-split">
-            <div class="he">
-                <span class="num">ג.</span> תּוֹלַדְתּוֹ שֶׁל זְרִיעָה - הַמְּזָרֶה וְהַמַּבְרִיךְ וְהַמַּרְכִּיב. וְכָל הָעוֹשֶׂה אֶחָד מֵאֵלּוּ בְּשָׁנָה שְׁבִיעִית לוֹקֶה.
+    <section class="halacha-card">
+        <div class="text-layout">
+            <div class="hebrew-side">
+                <span class="number-tag">ג.</span> תּוֹלַדְתּוֹ שֶׁל זְרִיעָה - הַמְּזָרֶה וְהַמַּבְרִיךְ וְהַמַּרְכִּיב. וְכָל הָעוֹשֶׂה אֶחָד מֵאֵלּוּ בְּשָׁנָה שְׁבִיעִית לוֹקֶה.
             </div>
-            <div class="en">
-                <span class="num">3.</span> Derivatives of sowing include scattering seeds, layering, or grafting. Anyone who performs one of these in the seventh year is liable for lashes.
+            <div class="english-side">
+                <span class="number-tag">3.</span> Derivatives of sowing include scattering seeds, layering, or grafting. Anyone who performs one of these in the seventh year is liable for lashes.
             </div>
         </div>
-        <div class="img-container">
-            <img src="image3.png" alt="Grafting and Layering" class="halacha-img">
+        <div class="image-box">
+            <img src="image3.png" alt="Agricultural Derivatives" class="halacha-img">
         </div>
-    </div>
+    </section>
 
 </div>
 
